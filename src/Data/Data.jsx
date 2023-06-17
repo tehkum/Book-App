@@ -83,7 +83,7 @@ export const BookData = [
     image: "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/41j-s9fHJcL.jpg",
     price: 11.99,
     read: true,
-    state: "none",
+    state: "Read",
     category: "Fantasy",
   },
   {
@@ -92,7 +92,7 @@ export const BookData = [
     author: "Herman Melville",
     publisher: "Harper & Brothers",
     year: 1851,
-    state: "none",
+    state: "Read",
     image:
       "https://m.media-amazon.com/images/I/71kxa1-0mfL.jpg",
     price: 9.99,
@@ -145,7 +145,7 @@ export const BookData = [
     image: "https://m.media-amazon.com/images/I/71Q1tPupKjL.jpg",
     price: 10.99,
     read: true,
-    state: "none",
+    state: "Currently Reading",
     category: "Fantasy",
   },
   {
@@ -193,7 +193,7 @@ export const BookData = [
     image: "https://m.media-amazon.com/images/I/71FTb9X6wsL.jpg",
     price: 10.99,
     read: false,
-    state: "none",
+    state: "Currently Reading",
     category: "Dystopian",
   },
   {
