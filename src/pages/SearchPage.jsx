@@ -27,7 +27,7 @@ export default function SearchPage(){
         </span>
       </div>
       <div className="display-book dis-search">
-      <div className="shelf-type">{itemSearched.length ? searchFilter?.map(({id, title, author, year, image, state})=><ItemBox id={id} title={title} image={image} author={author} year={year} state={state}/>): "...search item"}</div>
+      {searchFilter.length ? <div className="shelf-type">{itemSearched.length ? searchFilter?.map(({id, title, author, year, image, state})=><ItemBox id={id} title={title} image={image} author={author} year={year} state={state}/>): "...search item"}</div>: <div className="shelf-type">...No data found</div>}
       </div>
     </>
 }
