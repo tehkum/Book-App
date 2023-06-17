@@ -1,7 +1,7 @@
 import { useState } from "react";
 import DropBox from "./DropBox";
 
-export default function ItemBox({id, image, title, author, year, index, state}) {
+export default function ItemBox({id, image, title, author, year, index, state, category}) {
     const [ toggle, setToggle ] = useState(false);
 
     const toggleHandle = () => [
@@ -19,8 +19,9 @@ export default function ItemBox({id, image, title, author, year, index, state}) 
         <DropBox id={id} index={index} state={state} setToggle={setToggle}/></div>
       </span>
       <h4>{title}</h4>
-      <p>{author}</p>
-      <p>{year}</p>
+      <p>category: {category}</p>
+      <p>author: {author}</p>
+      <p>year: {year}</p>
     </div>
   );
 }

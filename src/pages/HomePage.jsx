@@ -11,8 +11,8 @@ export default function HomePage() {
       <div className="shelf-type">
         {bookData
           .filter(({ state }) => state === type)
-          .map(({ image, id, title, author, year, state }, index) => (
-            <ItemBox id={id} title={title} image={image} author={author} year={year} index={index} state={state} />
+          .map(({ image, id, title, author, year, state, category }, index) => (
+            <ItemBox id={id} title={title} image={image} author={author} year={year} index={index} state={state} category={category}/>
           ))}
       </div>
     );

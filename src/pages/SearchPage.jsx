@@ -12,7 +12,7 @@ export default function SearchPage(){
         setSearch(event.target.value)
     }
 
-    const searchFilter = bookData.filter(book => book.title.toLowerCase().includes(itemSearched.toLowerCase()));
+    const searchFilter = bookData.filter(book => book.category.toLowerCase().includes(itemSearched.toLowerCase()) || book.title.toLowerCase().includes(itemSearched.toLowerCase()));
 
     return <>
         <div className="header header-search">
@@ -27,7 +27,7 @@ export default function SearchPage(){
         </span>
       </div>
       <div className="display-book dis-search">
-      {searchFilter.length ? <div className="shelf-type">{itemSearched.length ? searchFilter?.map(({id, title, author, year, image, state})=><ItemBox id={id} title={title} image={image} author={author} year={year} state={state}/>): "...search item"}</div>: <div className="shelf-type">...No data found</div>}
+      {searchFilter.length ? <div className="shelf-type">{itemSearched.length ? searchFilter?.map(({id, title, author, year, image, state, category})=><ItemBox id={id} title={title} image={image} author={author} year={year} state={state} category={category}/>): "...search item"}</div>: <div className="shelf-type">...No data found</div>}
       </div>
     </>
 }
